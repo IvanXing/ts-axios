@@ -9,3 +9,15 @@ export function transformRequest(data: any): any {
   }
   return data
 }
+
+// 不配置返回类型，转换响应对象
+export function transformResponse(data: any): any {
+  if (typeof data === 'string') {
+    try {
+      data = JSON.parse(data)
+    } catch (e) {
+      // do nothing
+    }
+  }
+  return data
+}
