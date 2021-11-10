@@ -26,7 +26,7 @@ function transformRequestData(config: AxiosRequestConfig): any {
 // 处理url
 function transformURL(config: AxiosRequestConfig): string {
   const { url, params } = config
-  return buildURL(url, params)
+  return buildURL(url!, params)
 }
 
 // 处理headers
