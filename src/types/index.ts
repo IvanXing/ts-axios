@@ -67,4 +67,6 @@ export interface Axios {
 // 混合类型 为了axios({}) 调用
 export interface AxiosInstance extends Axios {
   (config: AxiosRequestConfig): AxiosPromise
+  // 重载的定义类型
+  (url: string, config?: AxiosRequestConfig): AxiosPromise
 }
